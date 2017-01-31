@@ -11,10 +11,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 The Project has following requirements
 
-  1. NodeJs -4.7.1
+  1. [NodeJs](http://nodejs.org/en/) - -4.7.1
   2. npm -4.1.2
-```
 
+Check the node version installed in your system using
+```
+node --version
+```
+```
+npm --version
 ```
 
 ### Installing
@@ -44,41 +49,46 @@ user@user-HP:~/CODE/project$ yo
   Get me out of here!
   ──────────────
 ```
-
+After sucessfully installing the generator run the generator and follow the steps. visit yeoman website for more details.
 
 ## Running the tests
 
 Basically the Yeoman gives almost all options for  building, Testing and rinnging the angular code
+Check the package.json file for all available options.
 
-### Break down into end to end tests
+### Running Single test
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+Run the Test using this command
 
 ```
-Give an example
+npm run test
 ```
+
+### Contineous Running Tests
+
+running the test scripts contineously
+
+```
+npm run test:auto
+```
+
 
 ## Deployment
 
-Tested the code deployment on the heroku.
+Tested the code deployment on the [HEROKU](https://www.heroku.com/).
+
+check the latest deployed build on https://futuerotechno.herokuapp.com/
 
 ## Built With
 
-* [Angular](http://www./) -
-* [Yeoman](https://m/) - t
-* [Gulp](https://) -
+* [Angular](https://angularjs.org/) - MVC at client side.
+* [Yeoman](http://yeoman.io/) - Builds basic folder structure and helps in easy getting started with angularjs.
+* [Gulp](http://gulpjs.com/) - A simple JavaScript Task Runner.
+* [Node](https://nodejs.org/en/) - For deployment server.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -86,16 +96,16 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ashwin Lagji** - *Initial work* - [ashwinlagji](https://github.com/ashwinlagji)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors]() who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License Version 2.0, - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
+*
+*
 * etc
