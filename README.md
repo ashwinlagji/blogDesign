@@ -53,7 +53,7 @@ After sucessfully installing the generator run the generator and follow the step
 
 ## Running the tests
 
-Basically the Yeoman gives almost all options for  building, Testing and rinnging the angular code
+Basically the Yeoman gives almost all options for  building, Testing and runnging the angular code
 Check the package.json file for all available options.
 
 ### Running Single test
@@ -102,7 +102,7 @@ See also the list of [contributors]() who participated in this project.
 
 ## License
 
-This project is licensed under the Apache License Version 2.0, - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License Version 2.0, - see the [LICENSE.md](License.md) file for details
 
 ## Acknowledgments
 
