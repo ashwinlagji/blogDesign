@@ -10,9 +10,11 @@ import {title} from './app/title';
 import {footer} from './app/footer';
 
 import './index.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'angular-ui-bootstrap';
 
 angular
-  .module('app', [techsModule, 'ui.router'])
+  .module('app', [techsModule, 'ui.router', 'ui.bootstrap'])
   .config(routesConfig)
   .component('app', main)
   .component('fountainHeader', header)
