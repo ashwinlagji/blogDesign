@@ -151,3 +151,8 @@ a:hover {
   left: initial;
   font-size: 14px;
 }
+
+/* Custom Styles*/
+.navbar-brand{
+  font-size: 2.25rem;
+}

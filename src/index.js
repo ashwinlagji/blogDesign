@@ -11,10 +11,15 @@ import {footer} from './app/footer';
 
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'angular-material/angular-material.css';
+import './icon-file.css';
 import 'angular-ui-bootstrap';
+import 'angular-animate';
+import 'angular-aria';
+import 'angular-material';
 
 angular
-  .module('app', [techsModule, 'ui.router', 'ui.bootstrap'])
+  .module('app', [techsModule, 'ui.router', 'ui.bootstrap', 'ngMaterial'])
   .config(routesConfig)
   .component('app', main)
   .component('fountainHeader', header)
