@@ -156,3 +156,8 @@ a:hover {
 .navbar-brand{
   font-size: 2.25rem;
 }
+
+.fix-to-top {
+  position: fixed;
+  top: 0;
+}
