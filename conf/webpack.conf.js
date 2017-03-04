@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const conf = require('./gulp.conf');
 const path = require('path');
+var bourbon = require('bourbon').includePaths;
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FailPlugin = require('webpack-fail-plugin');
@@ -34,7 +35,7 @@ module.exports = {
         loaders: [
           'style-loader',
           'css-loader',
-          'sass-loader'
+          'sass-loader?includePaths[]=' + bourbon
         ]
       },
       {

@@ -11,13 +11,13 @@ import {
 } from './app/main';
 import {
   header
-} from './app/header';
+} from './app/components/header/header';
 import {
   title
-} from './app/title';
+} from './app/components/main/title';
 import {
   footer
-} from './app/footer';
+} from './app/components/footer/footer';
 
 import './index.css';
 import './public/Styleshets/header.sass';
