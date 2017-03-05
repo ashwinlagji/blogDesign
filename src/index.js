@@ -21,6 +21,8 @@ import {
 
 import './index.css';
 import './public/Styleshets/header.sass';
+import './public/Styleshets/main.sass';
+import './public/Styleshets/footer.sass';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'angular-material/angular-material.css';
 import './icon-file.css';
