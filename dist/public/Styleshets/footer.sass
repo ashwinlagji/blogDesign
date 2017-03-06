@@ -1,0 +1,69 @@
+@import "bourbon"
+
+.footerr
+    display: flex
+    flex-direction: column
+    background-color: #222
+    color: white
+    +transition(all 2.5s ease-in-out)
+    .footer-share
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        padding: 20px
+        ul
+            display: flex
+            padding: 0
+            margin: 0
+            list-style-type: none
+            li
+                margin-left: 5px
+
+
+    .footer-message
+        background-color: rgba(0, 0, 0, 1)
+        flex-grow: 1
+        padding: 10px 20px
+        text-align: center
+
+.icon-facebook-share
+    background-color: rgb(59, 89, 152)
+    border-radius: 50%
+    cursor: pointer
+    +transition(all 0.5s ease-in-out)
+    &:hover
+        +transform(translateY(-5px) scale(1.1))
+        +transition(all 0.5s ease-in-out)
+.icon-google_plusone_share
+    background-color: rgb(220, 78, 65)
+    border-radius: 50%
+    cursor: pointer
+    +transition(all 0.5s ease-in-out)
+    &:hover
+        +transform(translateY(-5px) scale(1.1))
+        +transition(all 0.5s ease-in-out)
+.icon-twitter-share
+    background-color: rgb(29, 161, 242)
+    border-radius: 50%
+    cursor: pointer
+    +transition(all 0.5s ease-in-out)
+    &:hover
+        +transform(translateY(-5px) scale(1.1))
+        +transition(all 0.5s ease-in-out)
+.icon-instagram-share
+    background-color: rgb(224, 53, 102)
+    border-radius: 50%
+    cursor: pointer
+    +transition(all 0.5s ease-in-out)
+    &:hover
+        +transform(translateY(-5px) scale(1.1))
+        +transition(all 0.5s ease-in-out)
+.love
+    color: red
+    font-size: 30px
+
+@media screen and (max-width: 800px)
+    .footerr
+        .footer-share
+            flex-direction: row
+            justify-content: space-around
