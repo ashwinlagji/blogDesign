@@ -1,0 +1,65 @@
+<div  layout="column" ng-cloak>
+
+    <md-content layout-padding>
+        <form name="projectForm">
+            
+            <md-input-container class="md-block">
+                    <label>Client Name</label>
+                <md-icon md-svg-src="img/icons/ic_person_24px.svg" class="name"></md-icon>
+                    <input required name="clientName" ng-model="registerCtrl.project.clientName">
+                    <div ng-messages="projectForm.clientName.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+
+            <md-input-container class="md-block">
+                    <label>Password</label>
+                <input required name="clientPassword" ng-model="registerCtrl.project.clientPassword">
+                <div ng-messages="projectForm.clientPassword.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+                </md-input-container>
+            <md-input-container class="md-block">
+                <label>Confirm Password</label>
+                <input required name="clientConfirmPassword" ng-model="registerCtrl.project.clientConfirmPassword">
+                <div ng-messages="projectForm.clientConfirmPassword.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Client Email</label>
+                <input required type="email" name="clientEmail" ng-model="registerCtrl.project.clientEmail"
+                       minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+                <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                        Your email must be between 10 and 100 characters long and look like an e-mail address.
+                    </div>
+                </div>
+            </md-input-container>
+
+
+            <md-input-container class="md-block">
+                <md-checkbox name="tos" ng-model="registerCtrl.project.tos" required>
+                    I accept the terms of service.
+                </md-checkbox>
+                <div ng-messages="projectForm.tos.$error" multiple md-auto-hide="false">
+                    <div ng-message="required">
+                        You must accept the terms of service before you can proceed.
+                    </div>
+                </div>
+            </md-input-container>
+            <div>
+                <md-button class="md-raised md-primary" type="submit">Submit</md-button>
+            </div>
+
+            <p style="font-size:.8em; width: 100%; text-align: center;">
+                Make sure to include <a href="https://docs.angularjs.org/api/ngMessages" target="_blank">ngMessages</a> module when using ng-message markup.
+            </p>
+        </form>
+        <md-button class="md-fab md-fab-bottom-right md-primary" aria-label="Eat cake">
+            <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+        </md-button>
+    </md-content>
+</div>

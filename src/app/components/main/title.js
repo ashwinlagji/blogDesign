@@ -1,3 +1,3 @@
 export const title = {
-  template: require('./title.html')
+    template: require('./title.html')
 };

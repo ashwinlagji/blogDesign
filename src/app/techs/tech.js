@@ -1,6 +1,6 @@
 export const tech = {
-  template: require('./tech.html'),
-  bindings: {
-    tech: '<'
-  }
+    template: require('./tech.html'),
+    bindings: {
+        tech: '<'
+    }
 };

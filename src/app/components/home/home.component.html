@@ -1,0 +1,43 @@
+<div class="home">
+    <div class="top-section">   
+        <div >
+            <div style="height: 305px">
+                <div uib-carousel active="active" interval="homeCtrl.myInterval" no-wrap="homeCtrl.noWrapSlides">
+                    <div uib-slide ng-repeat="slide in homeCtrl.slides track by slide.id" index="slide.id">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                        <div class="carousel-caption">
+                            <h4>Slide {{slide.id}}</h4>
+                            <p>{{slide.text}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="bottom-section">
+        <div class="main-section">
+            <ul>
+                <li>
+                    <post></post>
+                </li>
+                <li>
+                    <post></post>
+                </li>
+                <li>
+                    <post></post>
+                </li>
+                <li>
+                    <post></post>
+                </li>
+                <li>
+                    <post></post>
+                </li>
+            </ul>
+        </div>
+        <div class="side-bar">
+            sidebar
+        </div>
+    </div>
+    
+</div>

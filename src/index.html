@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <base href="/">
     <meta charset="utf-8">
     <title>Futero Techno</title>
@@ -8,9 +9,24 @@
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="public/images/futerotechno-icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  </head>
 
-  <body ng-app="app">
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDzBG5ErnfBtDJ0tJ0w5IGNtQbsrgaCYC0",
+            authDomain: "blogdesign-f58de.firebaseapp.com",
+            databaseURL: "https://blogdesign-f58de.firebaseio.com",
+            storageBucket: "blogdesign-f58de.appspot.com",
+            messagingSenderId: "284917816696"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+</head>
+
+<body ng-app="app">
     <ui-view></ui-view>
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,31 @@
+@import "bourbon"
+
+.home
+    
+    .bottom-section
+        display: flex
+        .main-section
+            flex-grow: 1
+            background-color: #F5F5F5
+            ul
+                padding: 0
+                margin: 0
+                list-style-type: none
+
+        .side-bar
+            width: 45em
+            background-color: honeydew
+
+@media screen and (max-width: 800px)
+    
+    .home
+                
+        .bottom-section
+            display: flex
+            flex-direction: column
+            .main-section
+                background-color: grey
+
+            .side-bar
+                width: auto
+                background-color: honeydew
