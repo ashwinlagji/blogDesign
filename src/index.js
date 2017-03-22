@@ -26,6 +26,9 @@ import {
 import {
     homePage
 } from './app/components/home/home.component';
+import {
+    sideBar
+} from './app/components/home/sidebar/sidebar.component';
 
 import {
     authModule
@@ -52,6 +55,7 @@ import 'angular-animate';
 import 'angular-aria';
 import 'angular-material';
 import 'angularfire';
+import 'material-design-icons';
 
 angular
     .module('app', [techsModule, 'ui.router', 'ui.bootstrap', 'ngMaterial', 'ngAnimate', 'ngAria', 'firebase', authModule])
@@ -63,6 +67,12 @@ angular
     .component('post', post)
     .component('homePage', homePage)
     .component('register', Register)
+    .component('sideBar', sideBar)
+    .config($mdIconProvider => {
+        $mdIconProvider
+            .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
+            .defaultIconSet('img/icons/sets/core-icons.svg', 24);
+    })
     .directive('setClassWhenAtTop', ($window, $log) => {
         const $win = angular.element($window);
 
