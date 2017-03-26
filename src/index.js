@@ -43,6 +43,7 @@ import './public/Styleshets/main.sass';
 import './public/Styleshets/footer.sass';
 import './public/Styleshets/post.component.sass';
 import './public/Styleshets/home.component.sass';
+import './public/Styleshets/register.component.sass';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'angular-material/angular-material.css';
@@ -56,9 +57,12 @@ import 'angular-aria';
 import 'angular-material';
 import 'angularfire';
 import 'material-design-icons';
+import 'angular-material-icons';
+
+import 'angular-material-icons/svg-assets-cache';
 
 angular
-    .module('app', [techsModule, 'ui.router', 'ui.bootstrap', 'ngMaterial', 'ngAnimate', 'ngAria', 'firebase', authModule])
+    .module('app', [techsModule, 'ui.router', 'ui.bootstrap', 'ngMaterial', 'ngAnimate', 'ngAria', 'firebase', 'ngMdIcons', authModule, 'material.svgAssetsCache'])
     .config(routesConfig)
     .component('app', main)
     .component('fountainHeader', header)

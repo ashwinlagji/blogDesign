@@ -20,7 +20,6 @@
         .post-meta
             ul
                 display: flex
-                flex-direction: colomn
                 list-style-type: none
                 margin: 10 px
                 padding: 0
@@ -73,3 +72,20 @@
                             color: white
                     &:hover
                         background-color: #02BB9F
+
+@media screen and (max-width: 400px)
+    .post-wrapper
+        .post
+            .post-meta
+                ul
+                    flex-wrap: wrap
+            .post-body
+                .content
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                .content-footer
+                    flex-direction: column
+                    .readmore
+                        order: -1

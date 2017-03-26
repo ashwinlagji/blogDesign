@@ -2,12 +2,16 @@ function registerController($log) {
     $log.info("register Component");
 
     const self = this;
+    self.topDirections = ['left', 'up'];
+    self.bottomDirections = ['down', 'right'];
 
-    self.project = {
-        description: 'Nuclear Missile Defense System',
-        rate: 500,
-        special: true
-    };
+    self.isOpen = true;
+
+    self.availableModes = ['md-fling', 'md-scale'];
+    self.selectedMode = 'md-fling';
+
+    self.availableDirections = ['up', 'down', 'left', 'right'];
+    self.selectedDirection = 'right';
 }
 
 registerController.$inject = ['$log'];
