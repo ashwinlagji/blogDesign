@@ -59,7 +59,7 @@ import 'angularfire';
 import 'material-design-icons';
 import 'angular-material-icons';
 
-import 'angular-material-icons/svg-assets-cache';
+import './public/svg-assets-cache';
 
 angular
     .module('app', [techsModule, 'ui.router', 'ui.bootstrap', 'ngMaterial', 'ngAnimate', 'ngAria', 'firebase', 'ngMdIcons', authModule, 'material.svgAssetsCache'])
