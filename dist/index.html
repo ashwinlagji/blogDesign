@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <base href="/">
     <meta charset="utf-8">
     <title>Futero Techno</title>
@@ -8,9 +9,26 @@
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/png" href="public/images/futerotechno-icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link href="index-bca7719bb0bfa3b778b1424c51f8140b.css" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
 
-  <body ng-app="app">
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDzBG5ErnfBtDJ0tJ0w5IGNtQbsrgaCYC0",
+            authDomain: "blogdesign-f58de.firebaseapp.com",
+            databaseURL: "https://blogdesign-f58de.firebaseio.com",
+            storageBucket: "blogdesign-f58de.appspot.com",
+            messagingSenderId: "284917816696"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+<link href="index-b16c95622f53b0cd8b466daae2e366c4.css" rel="stylesheet"></head>
+
+<body ng-app="app">
     <ui-view></ui-view>
-  <script type="text/javascript" src="vendor-671dca8d9bd70637f001.js"></script><script type="text/javascript" src="app-671dca8d9bd70637f001.js"></script></body>
+<script type="text/javascript" src="vendor-0b6909b336343c4475b7.js"></script><script type="text/javascript" src="app-0b6909b336343c4475b7.js"></script></body>
+
 </html>

@@ -10,80 +10,84 @@ const pkg = require('../package.json');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  module: {
-    loaders: [{
-        test: /.json$/,
-        loaders: [
+    module: {
+        loaders: [{
+                test: /.json$/,
+                loaders: [
           'json-loader'
         ]
       },
-      {
-        test: /.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        enforce: 'pre'
+            {
+                test: /.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
+                enforce: 'pre'
       },
-      {
-        test: /\.css$/,
-        loaders: ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader?minimize!postcss-loader'
-        })
+            {
+                test: /\.css$/,
+                loaders: ExtractTextPlugin.extract({
+                    fallbackLoader: 'style-loader',
+                    loader: 'css-loader?minimize!postcss-loader'
+                })
       },
-      {
-        test: /\.(sass|scss)$/,
-        loaders: [
+            {
+                test: /\.(sass|scss)$/,
+                loaders: [
           'style-loader',
           'css-loader',
           'sass-loader?includePaths[]=' + bourbon
         ]
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: [
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000'
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loaders: [
           'ng-annotate-loader',
           'babel-loader'
         ]
       },
-      {
-        test: /.html$/,
-        loaders: [
+            {
+                test: /.html$/,
+                loaders: [
           'html-loader'
         ]
       }
     ]
-  },
-  plugins: [
+    },
+    plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     FailPlugin,
     new HtmlWebpackPlugin({
-      template: conf.path.src('index.html')
-    }),
+            template: conf.path.src('index.html')
+        }),
     new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        unused: true,
-        dead_code: true,
-        warnings: false
-      } // eslint-disable-line camelcase
-    }),
+            compress: {
+                unused: true,
+                dead_code: true,
+                warnings: false
+            } // eslint-disable-line camelcase
+        }),
     new ExtractTextPlugin('index-[contenthash].css'),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
-    }),
+            name: 'vendor'
+        }),
     new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: () => [autoprefixer]
-      }
-    })
+            options: {
+                postcss: () => [autoprefixer]
+            }
+        })
   ],
-  output: {
-    path: path.join(process.cwd(), conf.paths.dist),
-    filename: '[name]-[hash].js'
-  },
-  entry: {
-    app: `./${conf.path.src('index')}`,
-    vendor: Object.keys(pkg.dependencies)
-  }
+    output: {
+        path: path.join(process.cwd(), conf.paths.dist),
+        filename: '[name]-[hash].js'
+    },
+    entry: {
+        app: `./${conf.path.src('index')}`,
+        vendor: Object.keys(pkg.dependencies)
+    }
 };

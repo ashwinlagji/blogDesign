@@ -1,5 +1,13 @@
 @import "bourbon"
 
+=share-icon-mx($radius, $time, $translateY, $scale)
+    border-radius: $radius
+    cursor: pointer
+    +transition(all $time ease-in-out)
+    &:hover
+        +transform(translateY($translateY) scale($scale))
+        +transition(all $time ease-in-out)
+
 .footerr
     display: flex
     flex-direction: column
@@ -28,36 +36,20 @@
 
 .icon-facebook-share
     background-color: rgb(59, 89, 152)
-    border-radius: 50%
-    cursor: pointer
-    +transition(all 0.5s ease-in-out)
-    &:hover
-        +transform(translateY(-5px) scale(1.1))
-        +transition(all 0.5s ease-in-out)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
 .icon-google_plusone_share
     background-color: rgb(220, 78, 65)
-    border-radius: 50%
-    cursor: pointer
-    +transition(all 0.5s ease-in-out)
-    &:hover
-        +transform(translateY(-5px) scale(1.1))
-        +transition(all 0.5s ease-in-out)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
 .icon-twitter-share
     background-color: rgb(29, 161, 242)
-    border-radius: 50%
-    cursor: pointer
-    +transition(all 0.5s ease-in-out)
-    &:hover
-        +transform(translateY(-5px) scale(1.1))
-        +transition(all 0.5s ease-in-out)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
 .icon-instagram-share
     background-color: rgb(224, 53, 102)
-    border-radius: 50%
-    cursor: pointer
-    +transition(all 0.5s ease-in-out)
-    &:hover
-        +transform(translateY(-5px) scale(1.1))
-        +transition(all 0.5s ease-in-out)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
 .love
     color: red
     font-size: 30px
