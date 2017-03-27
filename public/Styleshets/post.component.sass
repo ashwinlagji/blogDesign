@@ -1,0 +1,91 @@
+@import "bourbon"
+
+.wrapper
+    margin: 10px
+
+.post-wrapper
+    margin: 0
+    padding: 0
+
+    .post
+        margin-bottom: 15px
+        background-color: #F5F5F5
+        padding: 15px
+        border-radius: 2px
+        /*box-shadow: inset -1px -2px 0px grey, 1px 1px 5px grey*/
+
+        h3
+            margin: 15px auto
+
+        .post-meta
+            ul
+                display: flex
+                list-style-type: none
+                margin: 10 px
+                padding: 0
+                li
+                    margin: 0 20px 0 0
+                    padding: 0 10px 0 0
+                    border-right: 2px dotted grey
+                    border-radius: 5 px
+
+        .post-body
+            display: flex
+            flex-direction: column
+            .content
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+                margin: 10px auto
+                img
+                    width: 200px
+                    border: 5px solid #eeeeee
+                    margin: 0 15px 0 0
+                div
+                    flex-grow: 1
+
+            .content-footer
+                display: flex
+                justify-content: space-between
+                align-items: center
+                .share-this
+                    display: flex
+                    padding: 20px
+                    align-items: center
+                    ul
+                        display: flex
+                        padding: 0
+                        margin: 0
+                        list-style-type: none
+                        li
+                            margin-left: 5px
+                .readmore
+                    margin: 0 10px
+                    padding: 5px 10px
+                    background-color: #EFEFEF
+
+                    a
+                        text-decoration: none
+                        color: #02BB9F
+                        &:hover
+                            text-decoration: none
+                            color: white
+                    &:hover
+                        background-color: #02BB9F
+
+@media screen and (max-width: 400px)
+    .post-wrapper
+        .post
+            .post-meta
+                ul
+                    flex-wrap: wrap
+            .post-body
+                .content
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                .content-footer
+                    flex-direction: column
+                    .readmore
+                        order: -1

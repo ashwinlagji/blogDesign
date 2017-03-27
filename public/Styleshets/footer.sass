@@ -1,0 +1,61 @@
+@import "bourbon"
+
+=share-icon-mx($radius, $time, $translateY, $scale)
+    border-radius: $radius
+    cursor: pointer
+    +transition(all $time ease-in-out)
+    &:hover
+        +transform(translateY($translateY) scale($scale))
+        +transition(all $time ease-in-out)
+
+.footerr
+    display: flex
+    flex-direction: column
+    background-color: #222
+    color: white
+    +transition(all 2.5s ease-in-out)
+    .footer-share
+        flex-grow: 1
+        display: flex
+        flex-direction: column
+        padding: 20px
+        ul
+            display: flex
+            padding: 0
+            margin: 0
+            list-style-type: none
+            li
+                margin-left: 5px
+
+
+    .footer-message
+        background-color: rgba(0, 0, 0, 1)
+        flex-grow: 1
+        padding: 10px 20px
+        text-align: center
+
+.icon-facebook-share
+    background-color: rgb(59, 89, 152)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
+.icon-google_plusone_share
+    background-color: rgb(220, 78, 65)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
+.icon-twitter-share
+    background-color: rgb(29, 161, 242)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
+.icon-instagram-share
+    background-color: rgb(224, 53, 102)
+    +share-icon-mx(50%, 0.2s, -5px, 1.1)
+    
+.love
+    color: red
+    font-size: 30px
+
+@media screen and (max-width: 800px)
+    .footerr
+        .footer-share
+            flex-direction: row
+            justify-content: space-around
