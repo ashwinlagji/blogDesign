@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <base href="/">
     <meta charset="utf-8">
     <title>Futero Techno</title>
     <meta name="description" content="">
@@ -12,10 +11,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
     <script>
-                  function getContextPath() {
-                      return window.location.pathname;
-                  }
-                  document.write("<base href='" + getContextPath() + "' />");
+        function getContextPath() {
+            return  window.location.pathname.split('/')[1];
+        }
+        console.log(getContextPath());
+        document.write("<base href='/" + getContextPath() + "/' />");
     </script>
 
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
@@ -35,6 +35,6 @@
 
 <body ng-app="app">
     <ui-view></ui-view>
-<script type="text/javascript" src="vendor-2446e88b82a62fbf808b.js"></script><script type="text/javascript" src="app-2446e88b82a62fbf808b.js"></script></body>
+<script type="text/javascript" src="vendor-39332a19958514ac8e65.js"></script><script type="text/javascript" src="app-39332a19958514ac8e65.js"></script></body>
 
 </html>
