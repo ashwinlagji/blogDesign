@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <base href='/'>
     <meta charset="utf-8">
     <title>Futero Techno</title>
     <meta name="description" content="">
@@ -10,13 +11,17 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
-    <script>
+    <link href="https://fonts.googleapis.com/css?family=Revalia&amp;subset=latin-ext" rel="stylesheet">
+<!--    <script>
         function getContextPath() {
             return  window.location.pathname.split('/')[1];
         }
         console.log(getContextPath());
-        document.write("<base href='/" + getContextPath() + "/' />");
-    </script>
+        if(getContextPath() == '')
+            document.write("<base href='/" + getContextPath() + "' />");
+        else
+            document.write("<base href='/" + getContextPath() + "/' />");
+    </script>-->
 
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
     <script>
@@ -31,10 +36,10 @@
         firebase.initializeApp(config);
 
     </script>
-<link href="index-b16c95622f53b0cd8b466daae2e366c4.css" rel="stylesheet"></head>
+<link href="index-e31680c039af54dbd93d5556e75eaa03.css" rel="stylesheet"></head>
 
 <body ng-app="app">
     <ui-view></ui-view>
-<script type="text/javascript" src="vendor-39332a19958514ac8e65.js"></script><script type="text/javascript" src="app-39332a19958514ac8e65.js"></script></body>
+<script type="text/javascript" src="vendor-ccbc1a773b4b9c6f09f5.js"></script><script type="text/javascript" src="app-ccbc1a773b4b9c6f09f5.js"></script></body>
 
 </html>
