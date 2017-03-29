@@ -7,7 +7,7 @@ import {
     authService
 } from './auth.service';
 
-angular.module('app.auth', [])
+angular.module('app.auth', ['firebase'])
     .directive('gzAuthForm', () => {
         return gzAuthForm;
     })

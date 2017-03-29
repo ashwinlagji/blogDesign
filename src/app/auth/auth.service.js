@@ -1,18 +1,20 @@
 export const authService = authServiceFunction;
 
-authServiceFunction.$inject = ['$firebaseAuth', 'firebaseDataService', 'partyService', '$log'];
+authServiceFunction.$inject = ['$firebaseAuth', '$log'];
 
-function authServiceFunction($firebaseAuth, firebaseDataService, partyService, $log) {
+function authServiceFunction($firebaseAuth, $log) {
     const firebaseAuthObject = $firebaseAuth();
 
     const service = {
         registerUsingGoogle,
+        registerUsingFacebook,
+        registerUsingTwitter,
+        registerUsingGithub,
         firebaseAuthObject,
         register,
         login,
         logout,
-        isLoggedIn,
-        sendWelcomeEmail
+        isLoggedIn
     };
 
     return service;
@@ -20,13 +22,21 @@ function authServiceFunction($firebaseAuth, firebaseDataService, partyService, $
     function registerUsingGoogle() {
         $log.info("Register Using Google");
         return firebaseAuthObject.$signInWithPopup("google");
-//            .then(result => {
-//            $log.info("Signed in as:", result.user.uid);
-//            return result;
-//        }).catch(error => {
-//            $log.error("Authentication failed:", error);
-//            return error;
-//        });
+    }
+
+    function registerUsingFacebook() {
+        $log.info("Register Using Google");
+        return firebaseAuthObject.$signInWithPopup("facebook");
+    }
+
+    function registerUsingTwitter() {
+        $log.info("Register Using Google");
+        return firebaseAuthObject.$signInWithPopup("twitter");
+    }
+
+    function registerUsingGithub() {
+        $log.info("Register Using Google");
+        return firebaseAuthObject.$signInWithPopup("github");
     }
 
     function register(user) {
@@ -38,17 +48,10 @@ function authServiceFunction($firebaseAuth, firebaseDataService, partyService, $
     }
 
     function logout() {
-        partyService.reset();
         firebaseAuthObject.$signOut();
     }
 
     function isLoggedIn() {
         return firebaseAuthObject.$getAuth();
-    }
-
-    function sendWelcomeEmail(emailAddress) {
-        firebaseDataService.emails.push({
-            emailAddress
-        });
     }
 }

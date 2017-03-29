@@ -13,12 +13,10 @@ function headerController($log, $window, $scope) {
 
     $win.on('scroll', () => {
         let headerScroll = false;
-        $log.warn(`scroll count : ${$window.scrollY}`);
         if ($window.scrollY >= offsetTop) {
             headerScroll = true;
         } else {
             headerScroll = false;
-            $log.warn(`from header  ${headerScroll}`);
         }
         $scope.$apply(() => {
             self.headerScroll = headerScroll;
