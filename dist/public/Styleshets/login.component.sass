@@ -1,0 +1,74 @@
+@import "bourbon"
+
+
+
+login
+    .form-wrapper
+        display: flex
+        min-width: 800px
+        margin: 10px auto
+        padding: 10px 40px
+        background-color: #fafafa
+
+        +transition(1s)
+            
+        @media screen and (max-width: 800px)
+            min-width: 560px
+            padding: 10px 10px
+            margin: 0 0 
+        .oauth-section
+            flex: 1
+            margin: 25px auto
+            div
+                padding: 10px 30px
+            .btn:hover, .btn:focus, .btn.focus 
+                color: #fff
+                text-decoration: none
+        .seperator
+            color: #AAAAAA
+            &:before ,&:after
+                content: ''
+                display: block
+                width: 1px
+                height: 45%
+                border: 1px solid #DDDDDD
+                margin: 0 15px
+                
+            div
+                padding: 5px
+                border: 2px solid #DDDDDD
+                border-radius: 50%
+                
+        .classic-login
+            flex: 1
+        @media screen and (max-width: 600px)
+            min-width: auto
+            flex-direction: column
+            margin: 0 0
+            .oauth-section
+                order: 3
+                margin: 0 0
+                div
+                    padding: 10px 25px
+            .seperator
+                display: flex
+                align-items: center
+                order: 2
+                color: #AAAAAA
+                &:before ,&:after
+                    content: ''
+                    display: inline-block
+                    width: 50%
+                    height: 1px
+                    border: 1px solid #DDDDDD
+                    margin: 0 0
+
+                div
+                    display: inline
+                    padding: 5px
+                    border: 2px solid #DDDDDD
+                    border-radius: 50%
+        @media screen and (max-width: 360px)
+            .oauth-section
+                div
+                    padding: 10px 5px

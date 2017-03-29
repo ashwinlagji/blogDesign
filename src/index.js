@@ -36,6 +36,9 @@ import {
 import {
     Register
 } from './app/components/signUp/register.component';
+import {
+    Login
+} from './app/components/signUp/login.component';
 
 import './index.css';
 import './public/Styleshets/header.sass';
@@ -44,11 +47,14 @@ import './public/Styleshets/footer.sass';
 import './public/Styleshets/post.component.sass';
 import './public/Styleshets/home.component.sass';
 import './public/Styleshets/register.component.sass';
+import './public/Styleshets/login.component.sass';
+import './public/Styleshets/bootstrap-social.css';
+import './public/Styleshets/css/font-awesome.css';
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'angular-material/angular-material.css';
 import './icon-file.css';
-// import 'angular-ui-bootstrap';
+//  import 'angular-ui-bootstrap';
 import 'angular-ui-bootstrap/dist/ui-bootstrap-csp.css';
 import 'angular-ui-bootstrap/dist/ui-bootstrap.js';
 import 'angular-ui-bootstrap/dist/ui-bootstrap-tpls.js';
@@ -71,29 +77,5 @@ angular
     .component('post', post)
     .component('homePage', homePage)
     .component('register', Register)
-    .component('sideBar', sideBar)
-    .config($mdIconProvider => {
-        $mdIconProvider
-            .iconSet('social', 'img/icons/sets/social-icons.svg', 24)
-            .defaultIconSet('img/icons/sets/core-icons.svg', 24);
-    })
-    .directive('setClassWhenAtTop', ($window, $log) => {
-        const $win = angular.element($window);
-
-        return {
-            restrict: "A",
-            link: (scope, element, attrs) => {
-                const topClass = attrs.setClassWhenAtTop; // get CSS class from directive's attribute value
-                const offsetTop = 70; // get element's top relative to the document
-
-                $win.on('scroll', () => {
-                    $log.warn($window.scrollY);
-                    if ($win.scrollY >= offsetTop) {
-                        element.addClass(topClass);
-                    } else {
-                        element.removeClass(topClass);
-                    }
-                });
-            }
-        };
-    });
+    .component('login', Login)
+    .component('sideBar', sideBar);

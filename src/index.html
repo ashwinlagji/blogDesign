@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <base href="/">
     <meta charset="utf-8">
     <title>Futero Techno</title>
     <meta name="description" content="">
@@ -11,6 +10,17 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Revalia&amp;subset=latin-ext" rel="stylesheet">
+    <script>
+        function getContextPath() {
+            return  window.location.pathname.split('/')[1];
+        }
+        console.log(getContextPath());
+        if(getContextPath() == '')
+            document.write("<base href='/" + getContextPath() + "' />");
+        else
+            document.write("<base href='/" + getContextPath() + "/' />");
+    </script>
 
     <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
     <script>

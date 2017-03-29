@@ -4,11 +4,11 @@
             <form name="projectForm">
 
                 <md-input-container class="md-block">
-                    <label>Client Name</label>
+                    <label>User Name</label>
                     <md-icon ng-bind="'person'" class="person-icon"></md-icon>
                     <input required name="clientName" ng-model="registerCtrl.project.clientName">
                     <div ng-messages="projectForm.clientName.$error">
-                        <div ng-message="required">This is required.</div>
+                        <div ng-message="required">User Name is required.</div>
                     </div>
                 </md-input-container>
 
@@ -17,7 +17,7 @@
                     <md-icon ng-bind="'lock'" class="password-icon"></md-icon>
                     <input required name="clientPassword" ng-model="registerCtrl.project.clientPassword">
                     <div ng-messages="projectForm.clientPassword.$error">
-                        <div ng-message="required">This is required.</div>
+                        <div ng-message="required">Password is required.</div>
                     </div>
                 </md-input-container>
                 <md-input-container class="md-block">
@@ -25,18 +25,18 @@
                     <md-icon ng-bind="'lock'" class="password-icon"></md-icon>
                     <input required name="clientConfirmPassword" ng-model="registerCtrl.project.clientConfirmPassword">
                     <div ng-messages="projectForm.clientConfirmPassword.$error">
-                        <div ng-message="required">This is required.</div>
+                        <div ng-message="required">You Need to confirm the password.</div>
                     </div>
                 </md-input-container>
 
                 <md-input-container class="md-block">
-                    <label>Client Email</label>
+                    <label>Email</label>
                     <md-icon ng-bind="'email'" class="email-icon"></md-icon>
                     <input required type="email" name="clientEmail" ng-model="registerCtrl.project.clientEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
 
                     <div ng-messages="projectForm.clientEmail.$error" role="alert">
                         <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
-                            Your email must be between 10 and 100 characters long and look like an e-mail address.
+                            Your email must be between 10 and 100 characters long and look like an e-mail address(abc@XYZ.com).
                         </div>
                     </div>
                 </md-input-container>
@@ -57,9 +57,10 @@
                 </div>
 
                 <p style="font-size:.8em; width: 100%; text-align: center;">
-                    you can also register using google+, facebook etc
+                    you can also login using google+, facebook and github
                 </p>
             </form>
+<!--
             <md-button class="md-fab md-fab-bottom-right md-primary" aria-label="Eat cake">
                 <md-icon ng-bind="'cake'"></md-icon>
             </md-button>
@@ -85,9 +86,11 @@
                     </md-fab-actions>
                 </md-fab-speed-dial>
             </div>
+-->
 
         </md-content>
 
+<!--
         <md-card>
             <img ng-src="/public/images/futerotechno.png" class="md-card-image " alt="Washed Out" height="50" width="50">
             <md-card-title>
@@ -113,5 +116,6 @@
                 </md-button>
             </md-card-actions>
         </md-card>
+-->
     </div>
 </div>
