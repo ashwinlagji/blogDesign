@@ -12,6 +12,15 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Revalia&amp;subset=latin-ext" rel="stylesheet">
     <script>
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
+    <script>
         function getContextPath() {
             return  window.location.pathname.split('/')[1];
         }
