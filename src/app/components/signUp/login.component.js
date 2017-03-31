@@ -32,6 +32,17 @@ function loginController($log, authService) {
             $log.info(result);
         });
     };
+
+    self.login = () => {
+        const user = {
+            email: self.username,
+            password: self.password
+        };
+        const promise = authService.login(user);
+        promise.then(result => {
+            $log.info(result);
+        });
+    };
 }
 
 loginController.$inject = ['$log', 'authService'];

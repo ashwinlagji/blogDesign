@@ -28,12 +28,12 @@
         </div>
         <div class="classic-login">
             <md-content layout-padding>
-                <form name="projectForm">
+                <form name="projectForm" ng-submit=" loginCtrl.login()">
 
                     <md-input-container class="md-block">
                         <label>User Name</label>
                         <md-icon ng-bind="'person'" class="person-icon"></md-icon>
-                        <input required name="clientName" ng-model="loginCtrl.project.clientName">
+                        <input type="email" required name="clientName" ng-model="loginCtrl.username">
                         <div ng-messages="projectForm.clientName.$error">
                             <div ng-message="required">User Name is required.</div>
                         </div>
@@ -42,13 +42,13 @@
                     <md-input-container class="md-block">
                         <label>Password</label>
                         <md-icon ng-bind="'lock'" class="password-icon"></md-icon>
-                        <input required name="clientPassword" ng-model="loginCtrl.project.clientPassword">
+                        <input type="password" required name="clientPassword" ng-model="loginCtrl.password">
                         <div ng-messages="projectForm.clientPassword.$error">
                             <div ng-message="required">Password is required.</div>
                         </div>
                     </md-input-container>
                     <md-input-container class="md-block">
-                        <md-checkbox name="tos" ng-model="loginCtrl.project.tos">
+                        <md-checkbox name="tos" ng-model="loginCtrl.remember">
                             Remember me
                         </md-checkbox>
                     </md-input-container>
